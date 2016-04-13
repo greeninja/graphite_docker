@@ -43,21 +43,7 @@ add	./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 # Nginx
 #
 # graphite
-expose	80
-# grafana
-expose  3000
-
-# Carbon line receiver port
-expose	2003
-# Carbon pickle receiver port
-expose	2004
-# Carbon cache query port
-expose	7002
-
-# Statsd UDP port
-expose	8125/udp
-# Statsd Management port
-expose	8126
+expose	80 3000 2003 2004 7002 8126 8125/udp
 
 add ./bin/init /usr/bin/init
 
